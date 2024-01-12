@@ -2,14 +2,18 @@ package Classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import Interfaces.iActorBehaviour;
 import Interfaces.iMarketBehaviour;
 import Interfaces.iQueueBehaviour;
+import Interfaces.iReturnOrder;
 
-public class Market implements iMarketBehaviour, iQueueBehaviour {
+public class Market implements iMarketBehaviour, iQueueBehaviour{
 
     private List<iActorBehaviour> queue;
+    private Map<String, Integer> promo; 
+
 
     public Market() {
         this.queue = new ArrayList<iActorBehaviour>();
@@ -77,4 +81,5 @@ public class Market implements iMarketBehaviour, iQueueBehaviour {
 
     }
 
+    
 }

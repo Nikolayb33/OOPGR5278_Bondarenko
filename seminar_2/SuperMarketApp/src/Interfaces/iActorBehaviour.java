@@ -14,6 +14,7 @@ public interface iActorBehaviour {
     public void setMakeOrder(boolean val);
 
     public Actor getActor();
+
     
     
 } 
