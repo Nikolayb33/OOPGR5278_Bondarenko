@@ -1,6 +1,9 @@
 package Classes;
 
-public abstract class Actor {
+import Interfaces.iActorBehaviour;
+import Interfaces.iQueueBehaviour;
+
+public abstract class Actor implements iActorBehaviour{
     //поля
     protected String name;
     protected boolean isTakeOrder;
