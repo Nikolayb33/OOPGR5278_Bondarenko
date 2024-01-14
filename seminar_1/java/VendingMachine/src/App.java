@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Domain.Bottle;
+import Domain.HotDrink;
 import Domain.Product;
 import Services.CoinDispencer;
 import Services.Display;
@@ -17,6 +18,9 @@ public class App {
         Product item5 = new Product(60, 1, "3korochki", 1238);
         Product item6 = new Product(90, 2, "Snikers", 1239);
         Product item7 = new Bottle(150, 3, "Cola", 1240, 0.5f);
+        // Добавляю в клиентский код Hot Drink
+        Product item8 = new HotDrink(30, 33, "Tea", 1241, 60);
+        Product item9 = new HotDrink(100, 34, "Americano", 1242, 58);
 
         Holder hold = new Holder();
         CoinDispencer coin = new CoinDispencer();
@@ -30,13 +34,15 @@ public class App {
         lisProd.add(item5);
         lisProd.add(item6);
         lisProd.add(item7);// это полифморфизм (использовали потомка, как экземпляр класса родителя)
+        lisProd.add(item8);// полиморфизм, добавляем экземпляры HotDrink в list Product
+        lisProd.add(item9);
 
         VendingMachine vm = new VendingMachine(hold, coin, disp, lisProd);
 
-        for(Product p: vm.getAssort()){
-            System.out.println(p);
-        }
-        // System.out.println(item7);
+        // for(Product p: vm.getAssort()){
+        //     System.out.println(p);
+        // }
+        System.out.println(item9);
 
 
         
